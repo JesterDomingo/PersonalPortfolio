@@ -1,11 +1,11 @@
 //Imports
-const express = require("express");
+const express = require('express');
 const app = express();
-const port = 5000;
+const path = require('path');
 
 //Static Files
 app.use(express.static('public'))
-app.use('/css', express.static(__dirname + 'public/css'))
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Set Templating Engine
 app.set('view engine', 'ejs')
@@ -15,19 +15,19 @@ app.get('', (req, res) =>{
     res.render('index');
 });
 
-app.get('/', (req, res) =>{
+app.get('/about', (req, res) =>{
     res.render('about');
 });
 
-app.get('/', (req, res) =>{
+app.get('/projects', (req, res) =>{
     res.render('projects');
 });
 
-app.get('/', (req, res) =>{
+app.get('/services', (req, res) =>{
     res.render('services');
 });
 
-app.get('/', (req, res) =>{
+app.get('/contactme', (req, res) =>{
     res.render('contactme');
 });
 
