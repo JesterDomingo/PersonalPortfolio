@@ -7,6 +7,10 @@ body{
   padding-top: 18%;
 }
 
+.header-text-div{
+  padding: 10%;
+}
+
 .nav_img{
   width: 4%;
   height: auto;
@@ -14,4 +18,18 @@ body{
 
 .jumbotron_pad{
   padding: 30px;
+}
+
+.card_img{
+  width: auto;
+  height: 50%;
+}
+
+.nav_space{
+  padding-right: 50px;
+}
+
+.abtme_card{
+  margin-left: 45px;
+  padding-top: 45px;
 }

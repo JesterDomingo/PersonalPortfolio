@@ -1,9 +1,12 @@
 //Imports
 const express = require('express');
-const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const path = require('path');
-
+const app = express();
 //Static Files
+app.use(bodyParser());
+app.use(cors());
 app.use(express.static('public'))
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -11,8 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs')
 
 //Navigation
-app.get('', (req, res) =>{
-    res.render('index');
+app.get('/home', (req, res) =>{
+    res.render('layouts');
 });
 
 app.get('/about', (req, res) =>{

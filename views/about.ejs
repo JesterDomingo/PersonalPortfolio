@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Me | Made by: Jester Domingo</title>
 </head>
 <body>
-    <h1>hi</h1>
+    <%- include('partial/navigation') %>
+    <!--WELCOME TEXT-->
+        <div class="header-text-div" style="padding-bottom: 30%;">
+        <h1 class="display-1 text-center">About Me!</h1>
+        <h1 class="display-5 text-center p-2">Thanks for taking an interest in me!</h1>
+        </div>
+        <!--END OF WELCOME TEXT-->
+        <!--CARD-->
+        <div class="card mb-3 mx-auto" style="width: 90%; height: 400px;">
+            <div class="row g-0">
+              <div class="col-md-4" style="width: 398px; height: auto;">
+                <img
+                  src="/images/jester_img.jpg" alt="Trendy Pants and Shoes" class="img-fluid rounded-start"/>
+              </div>
+              <div class="col-md-8 abtme_card">
+                <div class="card-body">
+                  <h1 class="card-title">Hi! Im Jester Domingo</h1>
+                  <p class="card-text">
+                   I am a 24 years old studying in Centennial College to be a software engineer! I enjoy coding, making side projects, gaming, and cycling. <br> <br>
+                   Click the button below to view my resume!
+                  </p>
+                  <a href="/document/Jester Robin Domingo CV.pdf" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click here!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--END OF CARD-->
+    <%- include('partial/footer') %>
 </body>
 </html>
