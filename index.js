@@ -14,8 +14,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs')
 
 //Navigation
-app.get('/home', (req, res) =>{
+app.get('', (req, res) =>{
     res.render('layouts');
+});
+
+app.get('/home', (req, res) =>{
+    res.render('home');
 });
 
 app.get('/about', (req, res) =>{
@@ -30,8 +34,8 @@ app.get('/services', (req, res) =>{
     res.render('services');
 });
 
-app.get('/contactme', (req, res) =>{
-    res.render('contactme');
+app.get('/contact', (req, res) =>{
+    res.render('contact');
 });
 
 //port listening

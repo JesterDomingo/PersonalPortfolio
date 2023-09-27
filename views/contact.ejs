@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Jester Domingo</title>
+    <link rel="stylesheet" href="css/contact_style.css">
+</head>
+<body>
+    <%- include('partial/navigation') %>
+    <div class="welcome-text-div">
+        <h1 class="display-1 text-center">Let's Link!</h1>
+        <h1 class="display-5 text-center p-2">Fill up the form below to get in touch with me.</h1>
+      </div>
+    <!--Contact Form-->
+    <section class="contact">
+        <div class="cont container">
+            <div class="contact-text">
+                <p>Drop your inquiry here and i will get back to you.</p>
+                <h6>Address</h6>
+                <p class="address">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, rerum.
+                </p>
+                <h6>Email</h6>
+                <p class="mail">fakeemail@gmail.com</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--End of Contact Form-->
+    <%- include('partial/footer') %>
+</body>
+</html>
