@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 
-//Static Files
+//Middleware and Static Files
 app.use(bodyParser());
 app.use(cors());
 app.use(express.static('public'))
@@ -15,28 +15,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs')
 
 //Navigation
-app.get('', (req, res) =>{
-    res.render('layouts');
-});
+const indexRouter = require('./src/routes/index');
+app.use('/', indexRouter);
 
-app.get('/home', (req, res) =>{
-    res.render('home');
-});
-
-app.get('/about', (req, res) =>{
-    res.render('about');
-});
-
-app.get('/projects', (req, res) =>{
-    res.render('projects');
-});
-
-app.get('/services', (req, res) =>{
-    res.render('services');
-});
-
-app.get('/contact', (req, res) =>{
-    res.render('contact');
+app.get('/', (req, res) => {
+  res.render('home', { title: 'Home' });
 });
 
 //port listening
